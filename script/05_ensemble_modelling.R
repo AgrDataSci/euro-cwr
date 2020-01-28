@@ -1,10 +1,12 @@
 #...................................................
 #...................................................
-# Model species distribution using bioclimatic variables 
+# Model species distribution using bioclimatic variables
+# 
 # Kaue de Sousa
 # Inland Norway University
-#...................................................
-#...................................................
+# 
+# ...................................................
+# ...................................................
 # Packages ####
 library("data.table")
 library("raster")
@@ -50,10 +52,31 @@ sp <- sort(unique(df$acronym))
 parentwd <- getwd()
   
 # check for species already processed 
+filepattern <- paste(c(gcm, "current"), collapse = "|")
+nfiles <- length(c(gcm, "current")) * 2
+
+for (i in seq_along(sp)) {
+  
+  pres <- paste0("processing/enm/", sp[i], "/ensembles/presence/")
+  pres <- grepl(filepattern, list.files(pres))
+  
+  suit <- paste0("processing/enm/", sp[i], "/ensembles/suitability/")
+  suit <- grepl(filepattern, list.files(suit))
+  
+  # if folder doesnt contain these files then it should be removed
+  if (sum(suit) != nfiles | sum(pres) != nfiles) {
+    
+    unlink(paste0("processing/enm/", sp[i]), recursive = TRUE)
+    
+  }
+  
+}
+
 done <- list.dirs("processing/enm")[-1]
 done <- strsplit(done, "/")
-done <- do.call("rbind", done)[,3]
+done <- suppressWarnings(do.call("rbind", done)[,3])
 done <- unique(done)
+
 
 # filter and run the model for the remnant 
 sp <- sp[!sp %in% done] 
@@ -78,10 +101,8 @@ for (i in seq_along(sp)) {
   # create a convexHull to limit the model to the 
   # areas where the species is actually present
   # calculate largest distance
-  largedist <- 
-    coord %>%
-    raster::pointDistance(., longlat = FALSE) %>%
-    max(., na.rm = TRUE)
+  largedist <- pointDistance(coord, longlat = FALSE)
+  largedist <- max(largedist, na.rm = TRUE)
 
   # make a convex hull 
   hull <- convHull(coord, lonlat = TRUE)
@@ -188,7 +209,7 @@ for (i in seq_along(sp)) {
   auc <- data.frame(auc = enm_step2$AUC.testing)
   write.csv(auc, file = "outputs/auc_testing.csv")
   
-  cat("Step 3.1: Generate map of current distribution \n")
+  message("Step 3.1: Generate map of current distribution \n")
   #step3: use previously calibrated models to construct consensus layers
   ensemble_current <- ensemble.raster(xn = bio_i,
                                       models.list = enm_step2$models,

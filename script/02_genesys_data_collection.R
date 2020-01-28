@@ -5,16 +5,13 @@
 #..........................................
 # Packages ####
 library("genesysr")
-library("tidyverse")
-library("magrittr")
+library("data.table")
 
 #..........................................
 #..........................................
 # Data ####
 
-df <- "data/species_names.csv"
-df %<>% 
-  read_csv()
+df <- fread("data/species_names.csv")
 
 taxa <- df[ ,c("genus","species", "acronym")]
 
@@ -119,24 +116,24 @@ save(gen_df, file = "data/raw/genesys_occurrences.rdm")
 
 
 
-plot(gen_sub$geo.longitude, gen_sub$geo.latitude)
-
-lonlat <- gen_sub[,c("geo.longitude", "geo.latitude")]
-
-names(lonlat) <- c("lon","lat")
-
-library("rnaturalearth")
-library("rnaturalearthdata")
-
-world <- ne_countries(scale = "medium", returnclass = "sf")
-class(world)
-
-map1 <- 
-  ggplot(data = world) +
-  geom_sf() +
-  geom_point(data = lonlat, aes(x = lon, y = lat), size = 1, 
-             shape = 23, fill = "darkred") + 
-  labs(x="",y="")
-map1
-ggsave("map.png", map1, dpi = 500, width = 20, height = 15, units = "cm")
-
+# plot(gen_sub$geo.longitude, gen_sub$geo.latitude)
+# 
+# lonlat <- gen_sub[,c("geo.longitude", "geo.latitude")]
+# 
+# names(lonlat) <- c("lon","lat")
+# 
+# library("rnaturalearth")
+# library("rnaturalearthdata")
+# 
+# world <- ne_countries(scale = "medium", returnclass = "sf")
+# class(world)
+# 
+# map1 <- 
+#   ggplot(data = world) +
+#   geom_sf() +
+#   geom_point(data = lonlat, aes(x = lon, y = lat), size = 1, 
+#              shape = 23, fill = "darkred") + 
+#   labs(x="",y="")
+# map1
+# ggsave("map.png", map1, dpi = 500, width = 20, height = 15, units = "cm")
+# 

@@ -7,16 +7,13 @@
 #..........................................
 # Packages ####
 library("rgbif")
-library("tidyverse")
-library("magrittr")
+library("data.table")
 
 #..........................................
 #..........................................
 # Data ####
 
-df <- "data/species_names.csv"
-df %<>% 
-  read_csv()
+df <- fread("data/species_names.csv")
 
 taxa <- df$taxa
 
@@ -80,6 +77,7 @@ for (i in seq_along(taxa)){
 }
 
 # keep these occurrences as raw data
-write.csv(gbif, "data/raw/gbif_occurrences.csv", 
+write.csv(gbif, 
+          "data/raw/gbif_occurrences.csv",
           row.names = FALSE)
 
