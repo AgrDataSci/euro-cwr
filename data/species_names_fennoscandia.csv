@@ -1,0 +1,191 @@
+acronym,input_taxon,input_status,family,genus,hybrid_marker,species,infraspecific_rank,infraspecific,authority,taxonomic_status,taxa,n,status
+ACOCAL,Acorus calamus L.,Accepted,Acoraceae,Acorus,NA,calamus,NA,NA,L.,Accepted,Acorus  calamus,139,in
+ACONAP,Aconitum napellus L.,Accepted,Ranunculaceae,Aconitum,NA,napellus,NA,NA,L.,Accepted,Aconitum  napellus,70,in
+AGRCAN,Agrostis canina L.,Accepted,Poaceae,Agrostis,NA,canina,NA,NA,L.,Accepted,Agrostis  canina,205,in
+AGRCAP,Agrostis tenuis Sibth.,Synonym,Poaceae,Agrostis,NA,capillaris,NA,NA,L.,Accepted,Agrostis  capillaris,577,in
+AGRCRI,Agropyron cristatum L. Gaertn.,Accepted,Poaceae,Agropyron,NA,cristatum,NA,NA,(L.) Gaertn.,Accepted,Agropyron  cristatum,4,out
+AGRGIG,Agrostis gigantea Roth.,Accepted,Poaceae,Agrostis,NA,gigantea,NA,NA,Roth,Accepted,Agrostis  gigantea,469,in
+ALLAMP,Allium ampeloprasum L.,Accepted,Amaryllidaceae,Allium,NA,ampeloprasum,NA,NA,L.,Accepted,Allium  ampeloprasum,19,out
+ALLSCO,Allium scorodoprasum L.,Accepted,Amaryllidaceae,Allium,NA,scorodoprasum,NA,NA,L.,Accepted,Allium  scorodoprasum,318,in
+ALOPRA,Alopecurus pratensis L,Accepted,Poaceae,Alopecurus,NA,pratensis,NA,NA,L.,Accepted,Alopecurus  pratensis,289,in
+AMMARE,Ammophila arenaria Link,Accepted,Poaceae,Ammophila,NA,arenaria,NA,NA,(L.) Link,Accepted,Ammophila  arenaria,267,in
+AMYBES,Amygdalus besseriana Schott.,Unresolved,Rosaceae,Amygdalus,NA,besseriana,NA,NA,Schott,Unresolved,Amygdalus  besseriana,NA,out
+ANGARC,Angelica archangelica L,Accepted,Apiaceae,Angelica,NA,archangelica,NA,NA,L.,Accepted,Angelica  archangelica,221,in
+ANTCER,Anthriscus cerefolium Sprengel,Accepted,Apiaceae,Anthriscus,NA,cerefolium,NA,NA,(L.) Hoffm.,Accepted,Anthriscus  cerefolium,124,in
+ANTODO,Anthoxanthum oduratum L.,Accepted,Poaceae,Anthoxanthum,NA,odoratum,NA,NA,L.,Accepted,Anthoxanthum  odoratum,314,in
+ANTVUL,Anthyllis vulneraria L.,Accepted,Leguminosae,Anthyllis,NA,vulneraria,NA,NA,L.,Accepted,Anthyllis  vulneraria,392,in
+ARCLAP,Arctium lappa L.( greater burdock),Accepted,Compositae,Arctium,NA,lappa,NA,NA,L.,Accepted,Arctium  lappa,124,in
+ARICLE,Aristolochia clematis L.,Accepted,Aristolochiaceae,Aristolochia,NA,clematitis,NA,NA,L.,Accepted,Aristolochia  clematitis,26,out
+ARMBRI,Armeniaca brigantina,Unresolved,Rosaceae,Armeniaca,NA,brigantiaca,NA,NA,(Vill.) Pers.,Unresolved,Armeniaca  brigantiaca,NA,out
+ARMRUS,Armoracia rusticana,Accepted,Brassicaceae,Armoracia,NA,rusticana,NA,NA,"P.Gaertn., B.Mey. & Scherb.",Accepted,Armoracia  rusticana,166,in
+ARRELA,Arrhenatherum avenaceum Beauv.,Synonym,Poaceae,Arrhenatherum,NA,elatius,NA,NA,(L.) P.Beauv. ex J.Presl & C.Presl.,Accepted,Arrhenatherum  elatius,203,in
+ARTABR,Artemisia abrotanum L.( lad's love),Accepted,Compositae,Artemisia,NA,abrotanum,NA,NA,L.,Accepted,Artemisia  abrotanum,163,in
+ARTABS,Artemisia absinthum L.,Accepted,Compositae,Artemisia,NA,absinthium,NA,NA,L.,Accepted,Artemisia  absinthium,188,in
+ARTMAR,Artemisia maritima L.,Accepted,Compositae,Artemisia,NA,maritima,NA,NA,L.,Accepted,Artemisia  maritima,288,in
+ARTVUL,Artemisia vulgaris L,Accepted,Compositae,Artemisia,NA,vulgaris,NA,NA,L.,Accepted,Artemisia  vulgaris,608,in
+ASPOFF,Asparagus officinalis L.,Accepted,Asparagaceae,Asparagus,NA,officinalis,NA,NA,L.,Accepted,Asparagus  officinalis,59,in
+ASTCIC,Astragalus cider L,Accepted,Leguminosae,Astragalus,NA,cicer,NA,NA,L.,Accepted,Astragalus  cicer,30,in
+ASTFAL,Astragalus falcatus Lam.,Accepted,Leguminosae,Astragalus,NA,falcatus,NA,NA,Lam.,Accepted,Astragalus  falcatus,7,out
+ASTGLY,Astragalus glycyphyllus L.,Accepted,Leguminosae,Astragalus,NA,glycyphyllos,NA,NA,L.,Accepted,Astragalus  glycyphyllos,268,in
+ATRHOR,Atriplex hortensis L.,Accepted,Amaranthaceae,Atriplex,NA,hortensis,NA,NA,L.,Accepted,Atriplex  hortensis,271,in
+AVEFAT,Avena fatua,Accepted,Poaceae,Avena,NA,fatua,NA,NA,L.,Accepted,Avena  fatua,38,in
+BARVER,Barbarea praecox R. Br.,Synonym,Brassicaceae,Barbarea,NA,verna,NA,NA,(Mill.) Asch.,Accepted,Barbarea  verna,7,out
+BARVUL,Barbarea vulgaris R. Br.,Accepted,Brassicaceae,Barbarea,NA,vulgaris,NA,NA,R.Br.,Accepted,Barbarea  vulgaris,1434,in
+BERCRA,Bergenia crassifolia Fritsch.,Accepted,Saxifragaceae,Bergenia,NA,crassifolia,NA,NA,(L.) Fritsch,Accepted,Bergenia  crassifolia,330,in
+BERVUL,Berberis vulgaris L.,Accepted,Berberidaceae,Berberis,NA,vulgaris,NA,NA,L.,Accepted,Berberis  vulgaris,292,in
+BETVUL,Beta vulgaris L.,Accepted,Amaranthaceae,Beta,NA,vulgaris,NA,NA,L.,Accepted,Beta  vulgaris,220,in
+BRANAP,Brassica napus var. napobrassica,Synonym,Brassicaceae,Brassica,NA,napus,NA,NA,L.,Accepted,Brassica  napus,116,in
+BRANIG,Brassica nigra,Accepted,Brassicaceae,Brassica,NA,nigra,NA,NA,(L.) K.Koch,Accepted,Brassica  nigra,3,out
+BRARAP,Brassica rapa L.( Turnip),Accepted,Brassicaceae,Brassica,NA,rapa,NA,NA,L.,Accepted,Brassica  rapa,31,in
+BROERE,Bromus erectus Huds.,Accepted,Poaceae,Bromus,NA,erectus,NA,NA,Huds.,Accepted,Bromus  erectus,58,in
+BROINE,Bromus inermis Leyss.,Accepted,Poaceae,Bromus,NA,inermis,NA,NA,Leyss.,Accepted,Bromus  inermis,106,in
+BRYALB,Bryonia alba L.,Accepted,Cucurbitaceae,Bryonia,NA,alba,NA,NA,L.,Accepted,Bryonia  alba,302,in
+BRYCRED,Bryonia cretica ssp. dioica L.,Accepted,Cucurbitaceae,Bryonia,NA,cretica,subsp.,dioica,(Jacq.) Tutin,Accepted,Bryonia  cretica subsp. dioica,NA,out
+BUNBUL,Bunium bulbocastanum L.,Accepted,Apiaceae,Bunium,NA,bulbocastanum,NA,NA,L.,Accepted,Bunium  bulbocastanum,98,in
+CAMRAP,Campanula rapunculus L.,Accepted,Campanulaceae,Campanula,NA,rapunculus,NA,NA,L.,Accepted,Campanula  rapunculus,5,out
+CARARE,Carex arenaria L.,Accepted,Cyperaceae,Carex,NA,arenaria,NA,NA,L.,Accepted,Carex  arenaria,127,in
+CARCAR,Carum carvi L.,Accepted,Apiaceae,Carum,NA,carvi,NA,NA,L.,Accepted,Carum  carvi,364,in
+CHABUL,Chaerophyllum bulbosum L.,Accepted,Apiaceae,Chaerophyllum,NA,bulbosum,NA,NA,L.,Accepted,Chaerophyllum  bulbosum,23,out
+CHANOB,Anthemis nobilis L.,Synonym,Compositae,Chamaemelum,NA,nobile,NA,NA,(L.) All.,Accepted,Chamaemelum  nobile,NA,out
+CHEALB,Chenopodium album L.,Accepted,Amaranthaceae,Chenopodium,NA,album,NA,NA,L.,Accepted,Chenopodium  album,616,in
+CHEBON,Chenopodium bonus-henricus L.,Accepted,Amaranthaceae,Chenopodium,NA,bonus-henricus,NA,NA,L.,Accepted,Chenopodium  bonus-henricus,4,out
+CHEFOL,Chenopodium foliosum Aschers.,Accepted,Amaranthaceae,Chenopodium,NA,foliosum,NA,NA,Asch.,Accepted,Chenopodium  foliosum,4,out
+CICINT,Cichorium intybus L.,Accepted,Compositae,Cichorium,NA,intybus,NA,NA,L.,Accepted,Cichorium  intybus,550,in
+COCOFF,Cochlearia officinalis L,Accepted,Brassicaceae,Cochlearia,NA,officinalis,NA,NA,L.,Accepted,Cochlearia  officinalis,359,in
+CONMAJ,Convallaria majalis L,Accepted,Asparagaceae,Convallaria,NA,majalis,NA,NA,L.,Accepted,Convallaria  majalis,183,in
+COTTIN,Cota tinctoria,Accepted,Compositae,Cota,NA,tinctoria,NA,NA,(L.) J.Gay,Accepted,Cota  tinctoria,296,in
+CRAMAR,Crambe maritima L,Accepted,Brassicaceae,Crambe,NA,maritima,NA,NA,L.,Accepted,Crambe  maritima,226,in
+CYNCRI,Cynosurus cristatus L,Accepted,Poaceae,Cynosurus,NA,cristatus,NA,NA,L.,Accepted,Cynosurus  cristatus,154,in
+CYTSCO,Sarothamnus scoparius Wimm.,Synonym,Leguminosae,Cytisus,NA,scoparius,NA,NA,(L.) Link,Accepted,Cytisus  scoparius,44,in
+DACGLO,Dactylis glomerata L.,Accepted,Poaceae,Dactylis,NA,glomerata,NA,NA,L.,Accepted,Dactylis  glomerata,219,in
+DAUCAR,Daucus carota L,Accepted,Apiaceae,Daucus,NA,carota,NA,NA,L.,Accepted,Daucus  carota,18,out
+DIGLAN,Digitalis lanata Ehrh.,Accepted,Plantaginaceae,Digitalis,NA,lanata,NA,NA,Ehrh.,Accepted,Digitalis  lanata,6,out
+DIGPUR,Digitalis purpurea L.,Accepted,Plantaginaceae,Digitalis,NA,purpurea,NA,NA,L.,Accepted,Digitalis  purpurea,82,in
+DIGSAN,Digitaria sanguinalis Scop.,Accepted,Poaceae,Digitaria,NA,sanguinalis,NA,NA,(L.) Scop.,Accepted,Digitaria  sanguinalis,20,out
+ELYCAN,Agropyron caninum P.B.,Synonym,Poaceae,Elymus,NA,caninus,NA,NA,(L.) L.,Accepted,Elymus  caninus,564,in
+ELYHIS,Agropyron intermedium,Synonym,Poaceae,Elymus,NA,hispidus,NA,NA,(Opiz) Melderis,Accepted,Elymus  hispidus,NA,out
+ELYREP,Agropyron repens,Synonym,Poaceae,Elymus,NA,repens,NA,NA,(L.) Gould,Accepted,Elymus  repens,368,in
+FESARU,Festuca arundinacea Schreb.,Accepted,Poaceae,Festuca,NA,arundinacea,NA,NA,Schreb.,Accepted,Festuca  arundinacea,13,out
+FESOVI,Festuca ovina L,Accepted,Poaceae,Festuca,NA,ovina,NA,NA,L.,Accepted,Festuca  ovina,484,in
+FESPRA,Festuca pratensis Huds.,Accepted,Poaceae,Festuca,NA,pratensis,NA,NA,Huds.,Accepted,Festuca  pratensis,26,out
+FESRUB,Festuca rubra L.,Accepted,Poaceae,Festuca,NA,rubra,NA,NA,L.,Accepted,Festuca  rubra,451,in
+FRAALN,Rhamnus frangula L.,Synonym,Rhamnaceae,Frangula,NA,alnus,NA,NA,Mill.,Accepted,Frangula  alnus,298,in
+FRAANA,Fragaria X Ananassa,Accepted,Rosaceae,Fragaria,x,ananassa,NA,NA,(Duchesne ex Weston) Duchesne ex Rozier,Accepted,Fragaria x ananassa,203,in
+FRAMOS,Fragaria moschata Duch.,Unresolved,Rosaceae,Fragaria,NA,moschata,NA,NA,auct.,Unresolved,Fragaria  moschata,636,in
+FRAVES,Fragaria vesca L.,Accepted,Rosaceae,Fragaria,NA,vesca,NA,NA,L.,Accepted,Fragaria  vesca,380,in
+FRAVIR,Fragaria viridis Duch.,Synonym,Rosaceae,Fragaria,NA,viridis,NA,NA,Weston,Accepted,Fragaria  viridis,393,in
+GALOFF,Galega officinalis L.,Accepted,Leguminosae,Galega,NA,officinalis,NA,NA,L.,Accepted,Galega  officinalis,14,out
+GLYFLU,Glyceria fluitans R.Br.,Accepted,Poaceae,Glyceria,NA,fluitans,NA,NA,(L.) R.Br.,Accepted,Glyceria  fluitans,326,in
+HEDHED,Hedysarum hedysaroides Schinz. & Thell.,Accepted,Leguminosae,Hedysarum,NA,hedysaroides,NA,NA,(L.) Schinz & Thell.,Accepted,Hedysarum  hedysaroides,4,out
+HESMAT,Hesperis matronalis L.,Accepted,Brassicaceae,Hesperis,NA,matronalis,NA,NA,L.,Accepted,Hesperis  matronalis,23,out
+HOLLAN,Holcus lanatus L.,Accepted,Poaceae,Holcus,NA,lanatus,NA,NA,L.,Accepted,Holcus  lanatus,190,in
+HUMLUP,Humulus lupulus L.,Accepted,Cannabaceae,Humulus,NA,lupulus,NA,NA,L.,Accepted,Humulus  lupulus,154,in
+JUGREG,Juglans regia L,Accepted,Juglandaceae,Juglans,NA,regia,NA,NA,L.,Accepted,Juglans  regia,14,out
+LATSYL,Lathyrus sylvestris L,Accepted,Leguminosae,Lathyrus,NA,sylvestris,NA,NA,L.,Accepted,Lathyrus  sylvestris,262,in
+LATTUB,Lathyrus tuberosum L.,Accepted,Leguminosae,Lathyrus,NA,tuberosus,NA,NA,L.,Accepted,Lathyrus  tuberosus,53,in
+LEVOFF,Levisticum officinale Koch.,Accepted,Apiaceae,Levisticum,NA,officinale,NA,NA,W.D.J.Koch,Accepted,Levisticum  officinale,236,in
+LINUSI,Linum asitatissimum L.,Accepted,Linaceae,Linum,NA,usitatissimum,NA,NA,L.,Accepted,Linum  usitatissimum,95,in
+LOLMUL,Lolium multiflorum Lamm. Var. westerwoldicum,Accepted,Poaceae,Lolium,NA,multiflorum,NA,NA,Lam.,Accepted,Lolium  multiflorum,204,in
+LOLPER,Lolium perenne L,Accepted,Poaceae,Lolium,NA,perenne,NA,NA,L.,Accepted,Lolium  perenne,248,in
+LOTCOR,Lotus corniculatus L.,Accepted,Leguminosae,Lotus,NA,corniculatus,NA,NA,L.,Accepted,Lotus  corniculatus,1465,in
+LOTPED,Lotus uliginosus Schuhr.,Synonym,Leguminosae,Lotus,NA,pedunculatus,NA,NA,Cav.,Accepted,Lotus  pedunculatus,860,in
+MALBAC,Malus baccata,Accepted,Rosaceae,Malus,NA,baccata,NA,NA,(L.) Borkh.,Accepted,Malus  baccata,79,in
+MALPRU,Malus x prunifolia,Accepted,Rosaceae,Malus,x,prunifolia,NA,NA,(Willd.) Borkh.,Accepted,Malus x prunifolia,48,in
+MALPUM,Malus pumila Mill.,Accepted,Rosaceae,Malus,NA,pumila,NA,NA,Mill.,Accepted,Malus  pumila,165,in
+MEDFAL,Medicago falcata,Accepted,Leguminosae,Medicago,NA,falcata,NA,NA,L.,Accepted,Medicago  falcata,105,in
+MEDGLO,Medicago glomerata Balbis.,Accepted,Leguminosae,Medicago,NA,glomerata,NA,NA,Balb.,Accepted,Medicago  glomerata,NA,out
+MEDLUP,Medicago lupulina L.,Accepted,Leguminosae,Medicago,NA,lupulina,NA,NA,L.,Accepted,Medicago  lupulina,255,in
+MEDSAT,Medicago sativa L,Accepted,Leguminosae,Medicago,NA,sativa,NA,NA,L.,Accepted,Medicago  sativa,36,in
+MELALB,Melilotus albus Medik.,Accepted,Leguminosae,Melilotus,NA,albus,NA,NA,Medik.,Accepted,Melilotus  albus,58,in
+MELALT,Melilotus altissimus Thuill.,Accepted,Leguminosae,Melilotus,NA,altissimus,NA,NA,Thuill.,Accepted,Melilotus  altissimus,114,in
+MELDEN,Melilotus dentatus Pers.,Accepted,Leguminosae,Melilotus,NA,dentatus,NA,NA,(Waldst. & Kit.) Pers.,Accepted,Melilotus  dentatus,133,in
+MELOFF,Melilotus officinalis Lam.,Unresolved,Leguminosae,Melilotus,NA,officinalis,NA,NA,(L.) Lam.,Unresolved,Melilotus  officinalis,334,in
+MENCAR,Mentha cardica Gerard ex Baker,Accepted,Lamiaceae,Mentha,NA,cardiaca,NA,NA,J. Gerard ex Baker,Accepted,Mentha  cardiaca,NA,out
+MENLON,Mentha rotudifolia,Synonym,Lamiaceae,Mentha,NA,longifolia,NA,NA,(L.) L.,Accepted,Mentha  longifolia,11,out
+MENPIP,Mentha x Piperita L.,Accepted,Lamiaceae,Mentha,x,piperita,NA,NA,L.,Accepted,Mentha x piperita,198,in
+MENSPI,Mentha spicata,Accepted,Lamiaceae,Mentha,NA,spicata,NA,NA,L.,Accepted,Mentha  spicata,284,in
+MENSUA,Mentha suaveolens Ehrh.,Accepted,Lamiaceae,Mentha,NA,suaveolens,NA,NA,Ehrh.,Accepted,Mentha  suaveolens,31,in
+MENVIL,Mentha x Villosa Hudson,Accepted,Lamiaceae,Mentha,x,villosa,NA,NA,Huds.,Accepted,Mentha x villosa,62,in
+MYRODO,Myrrhis odorata,Accepted,Apiaceae,Myrrhis,NA,odorata,NA,NA,(L.) Scop.,Accepted,Myrrhis  odorata,342,in
+NASOFF,Nasturtium officinalis R. Br.,Accepted,Brassicaceae,Nasturtium,NA,officinale,NA,NA,R.Br.,Accepted,Nasturtium  officinale,17,out
+NEPCAT,Nepeta cataria L.,Accepted,Lamiaceae,Nepeta,NA,cataria,NA,NA,L.,Accepted,Nepeta  cataria,23,out
+ONOVIC,Onobrychis vicifolia Scop.,Accepted,Leguminosae,Onobrychis,NA,viciifolia,NA,NA,Scop.,Accepted,Onobrychis  viciifolia,9,out
+ORIVUL,Origanum vulgare L.,Accepted,Lamiaceae,Origanum,NA,vulgare,NA,NA,L.,Accepted,Origanum  vulgare,248,in
+PAEOFF,Paeonia officinalis L.,Accepted,Paeoniaceae,Paeonia,NA,officinalis,NA,NA,L.,Accepted,Paeonia  officinalis,173,in
+PASSAT,Pastinaca sativa L.,Accepted,Apiaceae,Pastinaca,NA,sativa,NA,NA,L.,Accepted,Pastinaca  sativa,405,in
+PEUCER,Peucedanum cervaria,Accepted,Apiaceae,Peucedanum,NA,cervaria,NA,NA,(L.) Cusson ex Lapeyr.,Accepted,Peucedanum  cervaria,NA,out
+PEUOST,Peucedanum ostrunthium,Accepted,Apiaceae,Peucedanum,NA,ostruthium,NA,NA,(L.) W.D.J.Koch,Accepted,Peucedanum  ostruthium,230,in
+PHAARU,Phalaris arundinacea L,Accepted,Poaceae,Phalaris,NA,arundinacea,NA,NA,L.,Accepted,Phalaris  arundinacea,426,in
+PHLPRA,Phleum pratense L.,Accepted,Poaceae,Phleum,NA,pratense,NA,NA,L.,Accepted,Phleum  pratense,530,in
+POAPAL,Poa palustris L.,Accepted,Poaceae,Poa,NA,palustris,NA,NA,L.,Accepted,Poa  palustris,302,in
+POAPRA,Poa pratensis L.,Accepted,Poaceae,Poa,NA,pratensis,NA,NA,L.,Accepted,Poa  pratensis,396,in
+POATRI,Poa triviaalis L.,Accepted,Poaceae,Poa,NA,trivialis,NA,NA,L.,Accepted,Poa  trivialis,162,in
+POROLE,Portulaca oleracea L.,Accepted,Portulacaceae,Portulaca,NA,oleracea,NA,NA,L.,Accepted,Portulaca  oleracea,NA,out
+PRUCER,Prunus cerasus L.,Accepted,Rosaceae,Prunus,NA,cerasus,NA,NA,L.,Accepted,Prunus  cerasus,342,in
+PRUDOM,Prunus domestica L.,Accepted,Rosaceae,Prunus,NA,domestica,NA,NA,L.,Accepted,Prunus  domestica,128,in
+PRUDOMI,Prunus insititia L.,Synonym,Rosaceae,Prunus,NA,domestica,subsp.,insititia,(L.) Bonnier & Layens,Accepted,Prunus  domestica subsp. insititia,NA,out
+PRUFRU,Prunus fruticosa Pall.,Accepted,Rosaceae,Prunus,NA,fruticosa,NA,NA,Pall.,Accepted,Prunus  fruticosa,NA,out
+PRUMAH,Prunus mahaleb L.,Accepted,Rosaceae,Prunus,NA,mahaleb,NA,NA,L.,Accepted,Prunus  mahaleb,63,in
+PRUSIB,Prunus sibirica L,Accepted,Rosaceae,Prunus,NA,sibirica,NA,NA,L.,Accepted,Prunus  sibirica,NA,out
+PYRCOC,Pyracantha coccinea M.J. Roemer,Accepted,Rosaceae,Pyracantha,NA,coccinea,NA,NA,M.Roem.,Accepted,Pyracantha  coccinea,63,in
+PYRCOM,Pyrus communis L.,Accepted,Rosaceae,Pyrus,NA,communis,NA,NA,L.,Accepted,Pyrus  communis,103,in
+PYRCOR,Pyrus cordata Desv.,Accepted,Rosaceae,Pyrus,NA,cordata,NA,NA,Desv.,Accepted,Pyrus  cordata,NA,out
+RHACAT,Rhamnus catharticus L.,Accepted,Rhamnaceae,Rhamnus,NA,cathartica,NA,NA,L.,Accepted,Rhamnus  cathartica,94,in
+RIBACI,Ribes acicularis Smith,Accepted,Grossulariaceae,Ribes,NA,aciculare,NA,NA,Sm.,Accepted,Ribes  aciculare,NA,out
+RIBNIG,Ribes nigrum L.,Accepted,Grossulariaceae,Ribes,NA,nigrum,NA,NA,L.,Accepted,Ribes  nigrum,236,in
+RIBPET,Ribes petraeum Wulfen.,Accepted,Grossulariaceae,Ribes,NA,petraeum,NA,NA,Wulfen,Accepted,Ribes  petraeum,1,out
+RIBSAT,Ribes sativum Syme,Accepted,Grossulariaceae,Ribes,NA,sativum,NA,NA,(Rchb.) Syme,Accepted,Ribes  sativum,NA,out
+RIBSPI,Ribes spicatum Robson.,Accepted,Grossulariaceae,Ribes,NA,spicatum,NA,NA,Robson,Accepted,Ribes  spicatum,972,in
+RIBUVA,Ribes grossularia L.,Synonym,Grossulariaceae,Ribes,NA,uva-crispa,NA,NA,L.,Accepted,Ribes  uva-crispa,404,in
+ROSALB,Rosa X Alba,Synonym,Rosaceae,Rosa,NA,alba,NA,NA,L.,Accepted,Rosa  alba,147,in
+ROSARV,Rosa arvensis Hudson.,Accepted,Rosaceae,Rosa,NA,arvensis,NA,NA,Huds.,Accepted,Rosa  arvensis,NA,out
+ROSCAN,Rosa canina L.,Accepted,Rosaceae,Rosa,NA,canina,NA,NA,L.,Accepted,Rosa  canina,77,in
+ROSDAM,Rosa X Bifera,Synonym,Rosaceae,Rosa,x,damascena,NA,NA,Mill.,Unresolved,Rosa x damascena,55,in
+ROSGAL,Rosa gallica L.,Accepted,Rosaceae,Rosa,NA,gallica,NA,NA,L.,Accepted,Rosa  gallica,49,in
+ROSRUB,Rosa rubiginosa L.,Accepted,Rosaceae,Rosa,NA,rubiginosa,NA,NA,L.,Accepted,Rosa  rubiginosa,74,in
+ROSVIL,Rosa villosa L.,Accepted,Rosaceae,Rosa,NA,villosa,NA,NA,L.,Accepted,Rosa  villosa,163,in
+RUBARC,Rubus arcticus L.,Accepted,Rosaceae,Rubus,NA,arcticus,NA,NA,L.,Accepted,Rubus  arcticus,381,in
+RUBCHA,Rubus chamaemorus L.,Accepted,Rosaceae,Rubus,NA,chamaemorus,NA,NA,L.,Accepted,Rubus  chamaemorus,427,in
+RUBIDA,Rubus idaeus L.,Accepted,Rosaceae,Rubus,NA,idaeus,NA,NA,L.,Accepted,Rubus  idaeus,383,in
+RUBLAC,Rubus laciniatus Willd.,Accepted,Rosaceae,Rubus,NA,laciniatus,NA,NA,(Weston) Willd.,Accepted,Rubus  laciniatus,138,in
+RUBSAX,Rubus saxatilis L,Accepted,Rosaceae,Rubus,NA,saxatilis,NA,NA,L.,Accepted,Rubus  saxatilis,434,in
+RUBTIN,Rubia tinctorum L,Accepted,Rubiaceae,Rubia,NA,tinctorum,NA,NA,L.,Accepted,Rubia  tinctorum,52,in
+RUMACE,Rumex acetosa L.,Accepted,Polygonaceae,Rumex,NA,acetosa,NA,NA,L.,Accepted,Rumex  acetosa,1026,in
+RUMALP,Rumex alpinus L.,Accepted,Polygonaceae,Rumex,NA,alpinus,NA,NA,L.,Accepted,Rumex  alpinus,7,out
+RUMOBT,Rumex obtusifolus L.,Accepted,Polygonaceae,Rumex,NA,obtusifolius,NA,NA,L.,Accepted,Rumex  obtusifolius,47,in
+RUMPAT,Rumex patientia L.,Accepted,Polygonaceae,Rumex,NA,patientia,NA,NA,L.,Accepted,Rumex  patientia,17,out
+RUMSCU,Rumex scutatus L.,Accepted,Polygonaceae,Rumex,NA,scutatus,NA,NA,L.,Accepted,Rumex  scutatus,12,out
+SALACU,Salix acutifolia L.,Accepted,Salicaceae,Salix,NA,acutifolia,NA,NA,Willd.,Accepted,Salix  acutifolia,76,in
+SALALB,Salix alba L.,Accepted,Salicaceae,Salix,NA,alba,NA,NA,L.,Accepted,Salix  alba,748,in
+SALCAP,Salix caprea L.,Accepted,Salicaceae,Salix,NA,caprea,NA,NA,L.,Accepted,Salix  caprea,1370,in
+SALFRA,Salix fragilis L.,Accepted,Salicaceae,Salix,x,fragilis,NA,NA,L.,Accepted,Salix x fragilis,401,in
+SALPUR,Salix purpurea L.,Accepted,Salicaceae,Salix,NA,purpurea,NA,NA,L.,Accepted,Salix  purpurea,73,in
+SALTRI,Salix triandra L.,Accepted,Salicaceae,Salix,NA,triandra,NA,NA,L.,Accepted,Salix  triandra,357,in
+SALVIM,Salix viminalis L.,Accepted,Salicaceae,Salix,NA,viminalis,NA,NA,L.,Accepted,Salix  viminalis,98,in
+SAMNIG,Sambucus nigra L.,Accepted,Adoxaceae,Sambucus,NA,nigra,NA,NA,L.,Accepted,Sambucus  nigra,579,in
+SANMIN,Sanguisorba minor Scop.,Accepted,Rosaceae,Sanguisorba,NA,minor,NA,NA,Scop.,Accepted,Sanguisorba  minor,10,out
+SANOFF,Sanguisorba officinalis L.,Accepted,Rosaceae,Sanguisorba,NA,officinalis,NA,NA,L.,Accepted,Sanguisorba  officinalis,26,out
+SAPOFF,Saponaria officinalis L,Accepted,Caryophyllaceae,Saponaria,NA,officinalis,NA,NA,L.,Accepted,Saponaria  officinalis,150,in
+SCHLAC,Scirpus lacustrus L.,Synonym,Cyperaceae,Schoenoplectus,NA,lacustris,NA,NA,(L.) Palla,Accepted,Schoenoplectus  lacustris,296,in
+SCOCAR,Scopolia carniolica Jacq.,Accepted,Solanaceae,Scopolia,NA,carniolica,NA,NA,Jacq.,Accepted,Scopolia  carniolica,252,in
+SECVAR,Coronilla varia L.,Synonym,Leguminosae,Securigera,NA,varia,NA,NA,(L.) Lassen,Accepted,Securigera  varia,11,out
+SEDRUP,Sedum reflexum L.,Synonym,Crassulaceae,Sedum,NA,rupestre,NA,NA,L.,Accepted,Sedum  rupestre,331,in
+SEMTEC,Sempervivum tectorum L.,Accepted,Crassulaceae,Sempervivum,NA,tectorum,NA,NA,L.,Accepted,Sempervivum  tectorum,172,in
+SORDOM,Sorbus domestica L.,Accepted,Rosaceae,Sorbus,NA,domestica,NA,NA,L.,Accepted,Sorbus  domestica,NA,out
+SPATOW,Spartina townsendii H. et J. Grooves,Accepted,Poaceae,Spartina,x,townsendii,NA,NA,H.Groves & J.Groves,Accepted,Spartina x townsendii,NA,out
+SPEARV,Spergula arvensis L.,Accepted,Caryophyllaceae,Spergula,NA,arvensis,NA,NA,L.,Accepted,Spergula  arvensis,663,in
+TRIFLA,Trisetum flavescens,Accepted,Poaceae,Trisetum,NA,flavescens,NA,NA,(L.) P.Beauv.,Accepted,Trisetum  flavescens,24,out
+TRIHYB,Trifolium hybridum L.,Accepted,Leguminosae,Trifolium,NA,hybridum,NA,NA,L.,Accepted,Trifolium  hybridum,240,in
+TRIPAN,Trifolium pannonicum Jacq.,Accepted,Leguminosae,Trifolium,NA,pannonicum,NA,NA,Jacq.,Accepted,Trifolium  pannonicum,2,out
+TRIPRA,Trifolium pratense L.,Accepted,Leguminosae,Trifolium,NA,pratense,NA,NA,L.,Accepted,Trifolium  pratense,868,in
+TRIREP,Trifolium repens L.,Accepted,Leguminosae,Trifolium,NA,repens,NA,NA,L.,Accepted,Trifolium  repens,18,out
+ULEEUR,Ulex europaeus L,Accepted,Leguminosae,Ulex,NA,europaeus,NA,NA,L.,Accepted,Ulex  europaeus,10,out
+VALLOC,Valeriana locusta,Synonym,Caprifoliaceae,Valerianella,NA,locusta,NA,NA,(L.) Laterr.,Accepted,Valerianella  locusta,278,in
+VALOFF,Valeriana officinalis L.,Accepted,Caprifoliaceae,Valeriana,NA,officinalis,NA,NA,L.,Accepted,Valeriana  officinalis,369,in
+VALOFFC,Valeriana collina Wallr.,Synonym,Caprifoliaceae,Valeriana,NA,officinalis,subsp.,collina,(Wallr.) Nyman,Accepted,Valeriana  officinalis subsp. collina,NA,out
+VERDEN,Verbascum thapsiforme Schrad.,Synonym,Scrophulariaceae,Verbascum,NA,densiflorum,NA,NA,Bertol.,Accepted,Verbascum  densiflorum,44,in
+VICCRA,Vicia cracca L,Accepted,Leguminosae,Vicia,NA,cracca,NA,NA,L.,Accepted,Vicia  cracca,301,in
+VICHIR,Vicia hirsuta,Accepted,Leguminosae,Vicia,NA,hirsuta,NA,NA,(L.) Gray,Accepted,Vicia  hirsuta,300,in
+VICPAN,Vicia pannonica Crantz.,Accepted,Leguminosae,Vicia,NA,pannonica,NA,NA,Crantz,Accepted,Vicia  pannonica,45,in
+VINHIR,Cynanchum vincetoxicum,Synonym,Apocynaceae,Vincetoxicum,NA,hirundinaria,NA,NA,Medik.,Accepted,Vincetoxicum  hirundinaria,217,in
+VIOTRI,Viola tricolor L,Accepted,Violaceae,Viola,NA,tricolor,NA,NA,L.,Accepted,Viola  tricolor,786,in
