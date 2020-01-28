@@ -17,10 +17,15 @@
 *.knit.md
 *.bmp
 *.bpw
+*.txt
+*.csv
+
+# Large files
+*.grd
+*.gri
 
 # Other files
 manuscript/
 temporary/
 data/gadm/world/
 .Rproj.user
-processing/enm/
