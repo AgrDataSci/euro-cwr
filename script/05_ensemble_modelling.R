@@ -9,6 +9,7 @@
 # ...................................................
 # Packages ####
 library("data.table")
+library("rgdal")
 library("raster")
 library("dismo")
 library("rgeos")
@@ -46,7 +47,6 @@ sp <- sort(unique(df$acronym))
 #...................................................
 #...................................................
 # Run ensemble modelling ####
-
 # the BiodiversityR saves outputs on the current working directory
 # get the parent wd to return here if needed
 parentwd <- getwd()

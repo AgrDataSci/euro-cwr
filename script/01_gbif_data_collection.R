@@ -1,8 +1,6 @@
 # Retrieve GBIF occurrence data for distribution analysis 
 # updated by K. de Sousa 
 # Inland Norway University
-# Adapted from M. van Zonneveld
-# World Vegetable Center
 #..........................................
 #..........................................
 # Packages ####
@@ -16,6 +14,8 @@ library("data.table")
 df <- fread("data/species_names.csv")
 
 taxa <- df$taxa
+
+taxa <- gsub("  ", " ", taxa)
 
 # ....................................
 # ....................................
@@ -80,4 +80,5 @@ for (i in seq_along(taxa)){
 write.csv(gbif, 
           "data/raw/gbif_occurrences.csv",
           row.names = FALSE)
+
 

@@ -4,6 +4,7 @@
 
 # Session Data files
 .RData
+.DS_Store
 
 # RStudio files
 .Rproj.user/
@@ -28,4 +29,3 @@
 manuscript/
 temporary/
 data/gadm/world/
-.Rproj.user

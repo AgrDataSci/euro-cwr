@@ -4,15 +4,15 @@
 #..........................................
 #..........................................
 # Packages ####
-library("tidyverse")
-library("magrittr")
+library("data.table")
+library("sp")
+library("sf")
 library("maptools")
 library("raster")
 library("rgdal")
 library("dismo")
 library("alphahull")
 library("rgeos")
-library("sf")
 
 
 # extra function 
@@ -37,117 +37,122 @@ coast <- readOGR("data/gadm/europe", "europe_coast_points")
 eur <- readOGR("data/gadm/europe", "europe")
 
 # list of target countries
-country <- "data/country_iso.csv"
-
-country %<>% 
-  read_csv() %>% 
-  filter(region == "Europe") %>% 
-  dplyr::select(alpha2) %>% 
-  t()
-
+country <- fread("data/country_iso.csv")
+country <- country["Europe", on = "region"]
+country <- country$alpha2
 
 # define projection
-proj <- proj4string(gadm)
+myproj <- proj4string(gadm)
 
 #........................................
 #........................................
 # Read occurrence data ####
 
 # Read genesys data
-gen <- "data/raw/genesys_occurrences.csv"
-gen %<>% 
-  read_csv()
+gen <- fread("data/raw/genesys_occurrences.csv")
 
-names(gen) <- c("accession_number","acquisition_date","lat","lon","collection_site",
-                "country_origin","id","in_svalbard","institute","genus",
-                "species","subtaxa","institute_name","country_name","country")
+names(gen) <- c("acronym","accession_number","acquisition_date","lat","lon",
+                "collection_site", "country_origin","id","in_svalbard",
+                "institute","genus", "species","subtaxa","institute_name",
+                "country_name","country")
 
-gen %<>% 
-  mutate(scientific_name = paste(genus, species),
-         source = "genesys") %>% 
-  dplyr::select(scientific_name, lon, lat, country, source)
+gen[, scientific_name := paste(genus, species)]
 
+gen[, source := "genesys"]
+
+gen <- gen[, .(acronym, scientific_name, lon, lat, country, source)]
+
+gen$lat <- as.numeric(gen$lat)
+gen$lon <- as.numeric(gen$lon)
+
+
+#keep <- gen$country %in% country
+#gen <- gen[keep, ]
+
+plot(gen[, .(lon, lat)])
 
 # Read GBIF data
-gbif <- "data/raw/gbif_occurrences.csv"
-gbif %<>% 
-  read_csv()
+gbif <- fread("data/raw/gbif_occurrences.csv")
 
-# rename the dataframe
+# rename the variables
 names(gbif) <- c("name","scientific_name","country","lon",
                "lat","key","record","publishing_org",
                "year","gbif_id","taxa","acronym")
 
+
 # remove entries older than 1950
 keep <- gbif$year >= 1950 & !is.na(gbif$year)
 
-gbif %<>% 
-  filter(keep) 
+gbif <- gbif[keep, ]
 
-gbif %<>% 
-  mutate(source = "gbif") %>% 
-  dplyr::select(scientific_name, lon, lat, country, source, acronym)
+gbif[, source := "gbif"]
 
+gbif <- gbif[, .(acronym, scientific_name, lon, lat, country, source)]
 
-# Check occurrences in both datasets
-both <- "data/raw/in_both_databases.csv"
-both %<>% 
-  read_csv() %>% 
-  mutate(scientific_name = paste(genus, species)) %>% 
-  dplyr::select(scientific_name, acronym)
+#keep <- gbif$country %in% country
+#gbif <- gbif[keep, ]
 
+plot(gbif[, .(lon, lat)])
 
-gen <- right_join(gen, both, by = "scientific_name")
+# # Check occurrences in both datasets
+# both <- fread("data/raw/in_both_databases.csv")
+# 
+# keep <- gen$acronym %in% both$acronym
+# 
+# gen <- gen[keep, ]
+# 
+# keep <- gbif$acronym %in% both$acronym
+# 
+# gbif <- gbif[keep, ]
+# 
+dt <- rbind(gen, gbif)
 
+length(unique(dt$acronym))
 
-df <- bind_rows(gen, gbif)
+table(dt$acronym)
 
 #........................................
 #........................................
 # Data cleaning 1 ####
 
 # no NAs in lon
-keep <- !is.na(df$lon)
+keep <- !is.na(dt$lon)
 
 # and no NAs in lat
-keep <- !is.na(df$lat) & keep
+keep <- !is.na(dt$lat) & keep
 
 # apply filter
-df %<>% 
-  filter(keep)
-
-# remove duplicated coordinates within species
-df %<>% 
-  group_by(acronym, source) %>% 
-  distinct(lon,lat, .keep_all = TRUE) %>% 
-  ungroup()
+dt <- dt[keep, ]
 
 # remove coordinates without decimals
-keep <- unlist(lapply(df$lon, .decimalplaces)) != 0
+keep <- unlist(lapply(dt$lon, .decimalplaces)) > 0
 
-keep <- unlist(lapply(df$lat, .decimalplaces)) != 0 & keep
+keep <- unlist(lapply(dt$lat, .decimalplaces)) > 0 & keep
 
-df %<>% 
-  filter(keep)
+dt <- dt[keep, ]
+
+plot(dt[,.(lon,lat)])
 
 #........................................
 #........................................
 # Spatial cleaning 1 ####
 
 # remove points outside country borders
-df %>% 
-  dplyr::select(lon,lat) %>% 
-  SpatialPoints(., proj4string = CRS(proj)) ->
-  coord
+coord <- dt[, .(lon, lat)]
+coord <- SpatialPoints(coord, proj4string = CRS(myproj))
+plot(coord)
 
 keep <- over(coord, b)
 
 keep <- !is.na(keep[[1]])
 
-df %<>% 
-  filter(keep)
+dt <- dt[keep, ]
 
-rm(coord)
+coord <- dt[, .(lon, lat)]
+coord <- SpatialPoints(coord, proj4string = CRS(myproj))
+
+plot(gadm)
+points(coord, col = "blue", pch = 20)
 
 #........................................
 #........................................
@@ -155,12 +160,6 @@ rm(coord)
 
 # revise points in the sea and correct those placed within 10 arc-min
 # from the coastal border
-df %>%
-  dplyr::select(lon, lat) %>%
-  SpatialPoints(., proj4string = CRS(proj)) ->
-  coord
-
-
 # keep sea area in a buffer of 10 arcmin
 sea <- gDifference(b, eur, byid = TRUE)
 ids <- sapply(slot(sea, "polygons"), function(x) slot(x, "ID"))
@@ -172,14 +171,13 @@ sea <- over(coord, sea)
 sea <- !is.na(sea[[1]])
 
 # subset coordinates in the sea
-sea_coord <- df[sea, c("lon","lat","acronym")]
+sea_coord <- dt[sea, .(lon, lat, acronym)]
 
 sea_coord <- split(sea_coord, rownames(sea_coord))
 
 # transform dataframes into spatial points then set the original projection
 sea_buffer <- lapply(sea_coord, function(x) {
-  # df into spatial points object
-  x <- SpatialPoints(x[, c("lon","lat")], proj4string = CRS(proj))
+  x <- SpatialPoints(x[, .(lon, lat)], proj4string = CRS(myproj))
   # set the projection
   x <- gBuffer(x, byid = TRUE, width = 0.5)
   # return the result
@@ -192,14 +190,14 @@ pb <- txtProgressBar(min = 0, max = length(sea_buffer), initial = 1)
 for(i in seq_along(sea_buffer)) {
   
   x <- over(coast, sea_buffer[[i]])
-  x <- coast@coords[!is.na(x),]
+  x <- coast@coords[!is.na(x), ]
 
   if (nrow(x) > 0) {
-    x <- SpatialPoints(x, proj4string = CRS(proj))
+    x <- SpatialPoints(x, proj4string = CRS(myproj))
     
     # the original point
-    y <- sea_coord[[i]][,c("lon","lat")]
-    y <- SpatialPoints(y, proj4string = CRS(proj))
+    y <- sea_coord[[i]][, c("lon","lat")]
+    y <- SpatialPoints(y, proj4string = CRS(myproj))
     
     # find the nearest point
     d <- pointDistance(x, y, lonlat = TRUE)
@@ -222,39 +220,47 @@ nearest <- do.call("rbind", nearest)
 
 
 # replace sea points by their nearest points in the land
-df[sea,"lon"] <- nearest[,1]
-df[sea,"lat"] <- nearest[,2]
+dt[sea, "lon"] <- nearest[,1]
+dt[sea, "lat"] <- nearest[,2]
 
 # remove possible -999 values
-keep <- df$lon != -999
+keep <- dt$lon != -999
 
-df <- df[keep, ]
+dt <- dt[keep, ]
+
+coord <- dt[, .(lon, lat)]
+coord <- SpatialPoints(coord, proj4string = CRS(myproj))
+
+plot(gadm)
+points(coord, col = "blue", pch = 20)
 
 # ....................................
 # ....................................
 # remove points within the same grid cell
+# put genesys data in a different dataset
+gen <- dt[dt$source == "genesys", ]
 
-# place genesys data in a different dataset
-gen <- df[df$source == "genesys", ]
-
-df <- df[df$source == "gbif", ]
+dt <- dt[dt$source == "gbif", ]
 
 bio <- raster("data/bioclim/eto.tif")
 
-acronym <- unique(df$acronym)
+acronym <- sort(unique(dt$acronym))
 
-df_coords <- data.frame()
+dt_coords <- data.frame()
 
-pb <- txtProgressBar(min = 0, max = length(acronym), initial = 1) 
+pb <- txtProgressBar(min = 1, max = length(acronym), initial = 1) 
 for (i in seq_along(acronym)) {
+  
+  
+  k <- dt$acronym == acronym[i]
   # sampling data
-  df_i <- df[df$acronym == acronym[i], ]
+  dt_i <- dt[k, ]
   
-  coord <- df_i[, c("lon","lat")]
+  coord <- dt_i[, .(lon, lat)]
   
-  largedist <- coord %>%
-    raster::pointDistance(., longlat = FALSE) %>%
-    max(., na.rm = TRUE)
+  largedist <- pointDistance(coord, longlat = FALSE)
+  
+  largedist <- max(largedist)
   
   # make a convex hull and remove duplicated coordinates
   # in the same grid-cell
@@ -269,126 +275,70 @@ for (i in seq_along(acronym)) {
   # 30 arc-sec
   res(r) <- res(bio)
   
-  coord %<>%
-    as.matrix() %>% 
-    as.data.frame() %>%
-    dismo::gridSample(., r, n=1)
+  coord <- as.data.frame(coord)
   
+  coord <- gridSample(coord, r, n = 1)
   
   coord$acronym <- acronym[i]
   
-  coord$scientific_name <- df_i$scientific_name[1]
+  coord$scientific_name <- dt_i$scientific_name[i]
   
-  coord$source <- df_i$source[1]
+  coord$source <- dt_i$source[i]
   
-  df_coords <- rbind(df_coords, coord)
+  dt_coords <- rbind(dt_coords, coord)
   
   setTxtProgressBar(pb,i)
 }
 
+dt_coords <- as.data.table(dt_coords)
 
 # put genesys data back to the main dataset
-gen %<>% 
-  dplyr::select(-country)
+gen <- gen[, !c("country")]
 
-df_coords %<>% 
-  bind_rows(df_coords, gen) %>% 
-  as_tibble()
+dt <- rbind(dt_coords, gen)
+
+coord <- dt[, .(lon, lat)]
+coord <- SpatialPoints(coord, proj4string = CRS(myproj))
+
+plot(gadm)
+points(coord, col = "blue", pch = 20)
 
 # ......................................
 # ......................................
 # write outputs
-
-# occurrence in both datasets
-df_coords %>% 
-  group_by(acronym) %>% 
-  distinct(source, .keep_all = TRUE) %>% 
-  count() %>% 
-  mutate(keep = n == 2) %>% 
-  filter(keep) -> 
-  keep
-
-
-keep <- df_coords$acronym %in% keep$acronym
-
-df_coords %<>% 
-  filter(keep)
-
-
 # count number of points per species and add to species names
-df_coords %>% 
+library("tidyverse")
+dt %>% 
   group_by(acronym) %>%  
   count(acronym) %>% 
-  mutate(keep = n > 29) %>% 
+  mutate(keep = n > 15) %>% 
   filter(keep) ->
   keep 
 
-keep <- df_coords$acronym %in% keep$acronym
+keep <- dt$acronym %in% keep$acronym
 
-df_coords %<>% 
-  filter(keep)
+dt <- dt[keep, ]
 
-
-
-df_coords %>% 
+dt %>% 
   group_by(acronym, source) %>% 
-  count() -> x
+  count() %>% 
+  ungroup() -> 
+  x
 
+x
+
+unique(dt$acronym)
 
 # write file with cleaned points
-write.csv(df_coords, "data/passport_data.csv", row.names = FALSE)
+write.csv(dt, "data/passport_data.csv", row.names = FALSE)
 
+x <- dt[dt$acronym == "ALLSCO" & dt$source == "genesys", ]
 
-df_coords %>%
+x %>%
   dplyr::select(lon,lat) %>%
-  SpatialPoints(., proj4string = CRS(proj)) ->
+  SpatialPoints(., proj4string = CRS(myproj)) ->
   coord
 
 plot(eur, col = "lightgrey")
 plot(coord, col = "blue", cex = 1,
      bg = "Steelblue1", pch = 21, add = TRUE)
-
-
-# # Country borders from GADM
-# country <- c("NO","SE","FI","DK")
-# gadm <- lapply(country, function(x) {
-#   getData("GADM", 
-#           country = x,
-#           path = "data/gadm/",
-#           level = 0)
-# })
-# #gadm <- do.call("bind", gadm)
-# 
-# # add Russia
-# rus <- getData("GADM", 
-#                country = "RU",
-#                path = "data/gadm/",
-#                level = 0)
-# 
-# # create a clipping polygon
-# ext <- as(extent(5, 42, 59, 71),
-#           "SpatialPolygons")
-# 
-# proj <- proj4string(gadm[[1]])
-# 
-# proj4string(ext) <- CRS(proj)
-# 
-# # clip the map
-# rus <- gIntersection(rus, ext, byid = TRUE)
-# 
-# # add dataframe again
-# ids <- sapply(slot(rus, "polygons"), function(x) slot(x, "ID"))
-# d <- data.frame(GID_0 = rep("RU", length(ids)), 
-#                 NAME_0 = rep("Russia", length(ids)),
-#                 row.names = ids)
-# 
-# # Create a spatial polygon data frame (includes shp attributes)
-# rus <- SpatialPolygonsDataFrame(rus, d)
-# 
-# gadm[["RU"]] <- rus
-# 
-# #gadm <- do.call("bind", gadm)
-# 
-# rm(rus, d, ids)
-# 
-# country <- c(country, "RU")
